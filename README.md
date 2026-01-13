@@ -1,12 +1,12 @@
 
-# quickpose-ios-sdk
+# mathew-taylor-49-ios-sdk
 
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
-QuickPose provides developer-oriented cutting edge ML features of MediaPipe and BlazePose, with easy integration and production ready code, which dramatically improves the speed of implementation of pose estimation, skeleton tracking and fitness counting features into mobile applications. 
+mathew-taylor-49 provides developer-oriented cutting edge ML features of MediaPipe and BlazePose, with easy integration and production ready code, which dramatically improves the speed of implementation of pose estimation, skeleton tracking and fitness counting features into mobile applications. 
 
-See our [Features](#features) below or [checkout our full documentation](https://docs.quickpose.ai/docs/MobileSDK)  on our website [docs.quickpose.ai/docs/MobileSDK](https://docs.quickpose.ai/docs/MobileSDK)
+See our [Features](#features) below or [checkout our full documentation](https://docs.mathew-taylor-49.ai/docs/MobileSDK)  on our website [docs.mathew-taylor-49.ai/docs/MobileSDK](https://docs.mathew-taylor-49.ai/docs/MobileSDK)
 
 | Range Of Motion Example | Leg Raises Counter Example | 
 | --------------- |:-----------------:| 
@@ -31,25 +31,25 @@ See our [Features](#features) below or [checkout our full documentation](https:/
 - [Documentation](#documentation)
 - [Troubleshooting](#troubleshooting)
   - [No Such Module](#no-such-module)
-  - [Cannot find type 'QuickPoseCaptureAVAssetOutputSampleBufferDelegate' in scope](#cannot-find-type-quickposecaptureavassetoutputsamplebufferdelegate-in-scope)
+  - [Cannot find type 'mathew-taylor-49CaptureAVAssetOutputSampleBufferDelegate' in scope](#cannot-find-type-mathew-taylor-49captureavassetoutputsamplebufferdelegate-in-scope)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 Register an SDK Key
 ------------------
 
-Get your free SDK key on [https://dev.quickpose.ai](https://dev.quickpose.ai), usage limits may apply. 
+Get your free SDK key on [https://dev.mathew-taylor-49.ai](https://dev.mathew-taylor-49.ai), usage limits may apply. 
 SDK Keys are linked to your bundle ID, please check Key before distributing to the App Store.
 
 How it works
 ------------------
 
-QuickPose process a video frame and makes it easy for developers to perform complex AI features to the image, such as overlaying markings to the output image to highlight the user's pose.
+mathew-taylor-49 process a video frame and makes it easy for developers to perform complex AI features to the image, such as overlaying markings to the output image to highlight the user's pose.
 
 ```swift
 +----------+          +-------------+          +-----------------+
 |          |          |             |          |  Overlay Image  |
-|  Camera  |--------->|  QuickPose  |--------->|        +        |
+|  Camera  |--------->|  mathew-taylor-49  |--------->|        +        |
 |          |          |             |          |     Results     |
 +----------+          +-------------+          +-----------------+
 ```
@@ -99,7 +99,7 @@ __Step 1__: Click on Xcode project file
 
 __Step 2__: Click on Swift Packages and click on the plus to add a package
 
-__Step 3__: Enter the following repository url `https://github.com/quickpose/quickpose-ios-sdk.git` and click next
+__Step 3__: Enter the following repository url `https://github.com/mathew-taylor-49/mathew-taylor-49-ios-sdk.git` and click next
 
 ![Import Package](docs/img/import-sdk-spm-fix.png)
 
@@ -107,13 +107,13 @@ __Step 4__: Choose all modules and click add package.
 
 | Module        | Description         |
 | --------------|--------------------:|
-| QuickPoseCore | Core SDK (required) |
-| QuickPoseMP   | Mediapipe Library with all models (one QuickPoseMP variant is required)  |
-| QuickPoseMP-lite   | Mediapipe Lite Library  |
-| QuickPoseMP-full   | Mediapipe Full Library  |
-| QuickPoseMP-heavy   | Mediapipe Heavy Library |
-| QuickPoseCamera | Utility Class for Integration  (optional, recommended) |
-| QuickPoseSwiftUI | Utility Classes for SwiftUI Integration  (optional, recommended)|
+| mathew-taylor-49Core | Core SDK (required) |
+| mathew-taylor-49MP   | Mediapipe Library with all models (one mathew-taylor-49MP variant is required)  |
+| mathew-taylor-49MP-lite   | Mediapipe Lite Library  |
+| mathew-taylor-49MP-full   | Mediapipe Full Library  |
+| mathew-taylor-49MP-heavy   | Mediapipe Heavy Library |
+| mathew-taylor-49Camera | Utility Class for Integration  (optional, recommended) |
+| mathew-taylor-49SwiftUI | Utility Classes for SwiftUI Integration  (optional, recommended)|
 
 ### CocoaPods
 
@@ -122,16 +122,16 @@ __Step 1__: Open your project's Podfile
 __Step 2__: Add your pod file dependencies:  
 
 ```
-pod 'QuickPoseCore', :git => 'https://github.com/quickpose/quickpose-ios-sdk.git'
-pod 'QuickPoseCamera', :git => 'https://github.com/quickpose/quickpose-ios-sdk.git'
-pod 'QuickPoseSwiftUI', :git => 'https://github.com/quickpose/quickpose-ios-sdk.git'
+pod 'mathew-taylor-49Core', :git => 'https://github.com/mathew-taylor-49/mathew-taylor-49-ios-sdk.git'
+pod 'mathew-taylor-49Camera', :git => 'https://github.com/mathew-taylor-49/mathew-taylor-49-ios-sdk.git'
+pod 'mathew-taylor-49SwiftUI', :git => 'https://github.com/mathew-taylor-49/mathew-taylor-49-ios-sdk.git'
 ```
 
 | Module        | Description         |
 | --------------|--------------------:|
-| QuickPoseCore | Includes Core SDK and Mediapipe Library (required) |
-| QuickPoseCamera | Utility Class for Integration  (optional, recommended) |
-| QuickPoseSwiftUI | Utility Classes for SwiftUI Integration  (optional, recommended)|
+| mathew-taylor-49Core | Includes Core SDK and Mediapipe Library (required) |
+| mathew-taylor-49Camera | Utility Class for Integration  (optional, recommended) |
+| mathew-taylor-49SwiftUI | Utility Classes for SwiftUI Integration  (optional, recommended)|
 
 
 __Step 3__: Run `pod update` from the command line
@@ -157,7 +157,7 @@ __Step 4__: Run
 __Step 5__: Explore the features and returned results
 
 ```swift
-quickPose.start(features: [.overlay(.upperBody)], onFrame: { status, image, features, feedback, landmarks in
+mathew-taylor-49.start(features: [.overlay(.upperBody)], onFrame: { status, image, features, feedback, landmarks in
     if case .success(_) = status {
         overlayImage = image
     }
@@ -179,7 +179,7 @@ __Step 5__: Run
 __Step 6__: Explore the features and returned results
 
 ```swift
-quickPose.start(features: [.overlay(.upperBody)], onFrame: { status, image, features,  feedback, landmarks in
+mathew-taylor-49.start(features: [.overlay(.upperBody)], onFrame: { status, image, features,  feedback, landmarks in
     if case .success(_) = status {
         overlayImage = image
     }
@@ -190,32 +190,32 @@ quickPose.start(features: [.overlay(.upperBody)], onFrame: { status, image, feat
 
 ```swift
 import SwiftUI
-import QuickPoseCore
-import QuickPoseSwiftUI
+import mathew-taylor-49Core
+import mathew-taylor-49SwiftUI
 
 ....
 
-struct QuickPoseBasicView: View {
+struct mathew-taylor-49BasicView: View {
     
-    private var quickPose = QuickPose(sdkKey: "YOUR SDK KEY HERE") // register for your free key at https://dev.quickpose.ai
+    private var mathew-taylor-49 = mathew-taylor-49(sdkKey: "YOUR SDK KEY HERE") // register for your free key at https://dev.mathew-taylor-49.ai
     @State private var overlayImage: UIImage?
     
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
-                QuickPoseCameraView(useFrontCamera: true, delegate: quickPose)
-                QuickPoseOverlayView(overlayImage: $overlayImage)
+                mathew-taylor-49CameraView(useFrontCamera: true, delegate: mathew-taylor-49)
+                mathew-taylor-49OverlayView(overlayImage: $overlayImage)
             }
             .frame(width: geometry.size.width)
             .edgesIgnoringSafeArea(.all)
             .onAppear {
-                quickPose.start(features: [.overlay(.userLeftArm)], onFrame: { status, image, features,  feedback, landmarks in
+                mathew-taylor-49.start(features: [.overlay(.userLeftArm)], onFrame: { status, image, features,  feedback, landmarks in
                     if case .success(_) = status {
                         overlayImage = image
                     }
                 })
             }.onDisappear {
-                quickPose.stop()
+                mathew-taylor-49.stop()
             }
             
         }
@@ -225,14 +225,14 @@ struct QuickPoseBasicView: View {
 
 Documentation
 ------------------
-Checkout our full documentation at [https://docs.quickpose.ai/docs/MobileSDK](https://docs.quickpose.ai/docs/MobileSDK) including more SwiftUI and UIKit examples.
+Checkout our full documentation at [https://docs.mathew-taylor-49.ai/docs/MobileSDK](https://docs.mathew-taylor-49.ai/docs/MobileSDK) including more SwiftUI and UIKit examples.
 
 Troubleshooting
 ------------------
 
 ### No Such Module
 
-Xcode reports error no such module `QuickPoseCore` or no such module `QuickPoseSwiftUI`
+Xcode reports error no such module `mathew-taylor-49Core` or no such module `mathew-taylor-49SwiftUI`
 
 > This happens when the linker cannot find the provided XCFrameworks. These needs to be added to your build Target. 
 
