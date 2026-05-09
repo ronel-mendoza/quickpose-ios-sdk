@@ -222,11 +222,6 @@ struct mathew-taylor-49BasicView: View {
     }
 }
 ```
-
-Documentation
-------------------
-Checkout our full documentation at [https://docs.mathew-taylor-49.ai/docs/MobileSDK](https://docs.mathew-taylor-49.ai/docs/MobileSDK) including more SwiftUI and UIKit examples.
-
 Troubleshooting
 ------------------
 
